@@ -4,16 +4,13 @@
 
 ## The first rules
 
-The design spec from the planning days was strict, almost stubborn:
+The design spec from the planning days was strict. Stubborn, even. Warm off-white paper colours, ink-black text and exactly one accent blue. A serif font for dates and titles and a calm humanist sans for everything else. Hairline rules instead of boxes inside boxes.
 
-- warm off-white **paper** colours, ink-black text, **one** accent blue,
-- a serif display font for dates and titles, a calm humanist sans for everything else,
-- hairline rules instead of boxes inside boxes,
-- and a list of banned things: gradients, glowing blobs, emoji as icons, neon, and specifically **"glassmorphism or frosted blur"**.
+It also had a list of banned things: gradients, glowing blobs, emoji as icons, neon, and specifically "glassmorphism or frosted blur".
 
 Keep that last one in mind.
 
-The paper look grew through September and October. The dark theme stayed close to the first prototype, with tabs added on top when several notebooks could be open at once (2.6.0):
+The paper look grew through September and October. The dark theme stayed close to the first prototype. Tabs were added on top once several notebooks could be open at the same time (2.6.0).
 
 | Dark, with tabs | Paper, with a writing area in the day |
 |---|---|
@@ -21,9 +18,9 @@ The paper look grew through September and October. The dark theme stayed close t
 
 ## Why Glass
 
-By November the app did a lot, and it looked like it: bars, panels, borders, more bars. It felt heavy, especially on a big iPad screen. At the same time Apple's own apps had moved to translucent, layered "glass" surfaces, and NorthStar started to look old next to them.
+By November the app did a lot, and you could see it. Bars, panels, borders, more bars. It felt heavy, especially on a big iPad screen. Meanwhile Apple's own apps had moved to translucent, layered "glass" surfaces, and NorthStar started to look old next to them.
 
-So the rule from August was overturned. Not because the old rule was wrong, but because the app had changed. The new idea:
+So I threw out my own rule from August. I don't think the rule was wrong back then. The app had simply changed. The new idea was this:
 
 > The **controls** float on glass over a background. **Your pages stay paper.**
 
@@ -31,15 +28,11 @@ Your notes, timetable and notebooks never become see-through. Only the bars, men
 
 ## Eight rounds in five days
 
-The Glass design landed on **10 November** as the new default, with Classic kept as an option, and then went through round after round of fixes:
+Glass became the new default on 10 November, with Classic kept as an option. Then came round after round of fixes.
 
-- **Round 2 to 3:** dialogs, the pen sheet, typed notes, one pen toolbar everywhere, glass popups.
-- **Round 4:** glass over *any* background, a notebook "desk", and the page curl put back (see [chapter 6](06-handwriting-and-notebooks.md#the-page-curl-story)).
-- **Round 5:** Classic must look exactly like Classic again, not like "Glass with the glass turned off".
-- **Round 6 to 7:** transparent backgrounds, full-bleed documents, a live 0 to 100 glass slider.
-- **Round 8:** real frosted glass, like the preview I had picked, with one shared wallpaper.
+Rounds 2 and 3 were dialogs, the pen sheet, typed notes, one pen toolbar everywhere and glass popups. Round 4 made glass work over any background, added a notebook "desk" and put the page curl back (see [chapter 6](06-handwriting-and-notebooks.md#the-page-curl-story)). Round 5 was about Classic. It had to look exactly like Classic again, and for a while it looked like Glass with the glass turned off. Rounds 6 and 7 brought transparent backgrounds, full-bleed documents and a live glass slider from 0 to 100. Round 8 finally gave me real frosted glass, like the preview I had picked, with one shared wallpaper.
 
-Version **3.3.0** shipped it on **14 November**: *"New appearance: Glass design, shared backgrounds, adjustable frost and palette-matched planner pages."*
+Version 3.3.0 shipped it on 14 November: *"New appearance: Glass design, shared backgrounds, adjustable frost and palette-matched planner pages."*
 
 | Classic | Glass |
 |---|---|
@@ -53,7 +46,7 @@ Version **3.3.0** shipped it on **14 November**: *"New appearance: Glass design,
 |---|---|
 | ![Glass Tasks with smart lists](../../assets/glass/2026-11-14-glass-tasks.webp) | ![Appearance settings: Classic or Glass, glass amount, frost](../../assets/glass/2026-11-14-glass-appearance-settings.webp) |
 
-Notebooks in Glass: the page sits on the desk, the controls float above it.
+In a Glass notebook the page sits on the desk and the controls float above it.
 
 | Notebook with page strip | Selection on a page |
 |---|---|
@@ -61,15 +54,13 @@ Notebooks in Glass: the page sits on the desk, the controls float above it.
 
 ## Glass without the cost
 
-Frosted blur is expensive to draw, and an iPad drawing a blur behind every bar while you write would ruin the pen latency from [chapter 1](01-the-question.md). The solution was to blur the background once, keep it, and let every glass surface sample that saved blur instead of blurring live. No blur inside a blur, and the Day and Month views ended up with no live blurs at all.
+Frosted blur is expensive to draw. An iPad that draws a blur behind every bar while you write would ruin the pen latency from [chapter 1](01-the-question.md). So the app blurs the background once and keeps it, and every glass surface samples that saved blur. Nothing is blurred live, and there is never a blur inside a blur. The Day and Month views ended up with no live blurs at all.
 
 ## Accessibility
 
-- **Reduce Transparency** in iOS settings turns the bars solid.
-- The **glass amount** slider goes from 0 (solid, like Classic) to 100.
-- Layouts were checked with text sizes from 100 % to 200 % and with every app font, down to a narrow phone.
+Reduce Transparency in the iOS settings turns the bars solid. The glass amount slider goes from 0 (solid, like Classic) to 100. I checked the layouts with text sizes from 100 % to 200 % and with every app font, down to a narrow phone.
 
-**Learned:** design rules are tools, not laws. Write down *why* each rule exists, so that when the situation changes you know which rule can go.
+What I'd tell myself in August: write down why each design rule exists. When things change, you then know which rule can go.
 
 ## From Classic to Glass, step by step
 

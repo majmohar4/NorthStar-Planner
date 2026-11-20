@@ -2,33 +2,33 @@
 
 [← Mum's idea](02-mums-idea.md) · [Next: Sync and the server →](04-sync-and-the-server.md)
 
-Building started on 22 August 2026. The first milestone was small on purpose: a header, the Month / Week / Day switch, swiping between days, pinch zoom that keeps the spot under your fingers, and a settings page for theme, accent colour, weekends and school hours.
+I started building on 22 August 2026. The first milestone was small on purpose: a header, the Month / Week / Day switch, swiping between days, pinch zoom that keeps the spot under your fingers, and a settings page for theme, accent colour, weekends and school hours.
 
-Within a week the app had a timetable you could write on, a Top 3, a to-do list, a server, sign-in and a first web build. Version **0.6.0** shipped to my mum's iPad on **28 August**, one week after the first planning commit.
+A week later the app had a timetable you could write on, a Top 3, a to-do list, a server, sign-in and a first web build. Version 0.6.0 went onto my mum's iPad on 28 August, one week after the first planning commit.
 
 ## What it looked like
 
-The first look was dark, calm and quite bare. Events were grey rows on a lesson grid, the right side held Top 3, short notes, to-do and a notes area.
+Dark, calm and pretty bare. Events were grey rows on a lesson grid. The right side had Top 3, short notes, to-do and a notes area.
 
 | Day, 28 August | Month, 28 August |
 |---|---|
 | ![First Day view, dark](../../assets/prototype/2026-08-28-day-view-dark.webp) | ![First Month view, dark](../../assets/prototype/2026-08-28-month-view-dark.webp) |
 
-Four days later the panels got frames, numbered Top 3 rows (01, 02, 03), a "day 258 / 365" counter and a coloured date stamp:
+Four days later the panels had frames, the Top 3 rows had numbers (01, 02, 03), and there was a "day 258 / 365" counter and a coloured date stamp.
 
 | Day, 1 September | Month, 2 September |
 |---|---|
 | ![Day view with framed panels](../../assets/prototype/2026-09-01-day-view-dark-cards.webp) | ![Month view with event chips](../../assets/prototype/2026-09-02-month-view-dark.webp) |
 
-And there was a light "paper" theme, which slowly became the main look:
+There was also a light "paper" theme. Slowly it became the main look.
 
 ![Week view, early September](../../assets/prototype/2026-09-02-week-view-ipad-light.webp)
 
-The phone got its own layout with a bottom bar:
+The phone got its own layout with a bottom bar.
 
 <img src="../../assets/prototype/2026-09-02-day-view-phone-dark.webp" alt="Day view on a phone, early September" width="320">
 
-The first whiteboard and the first task lists were very plain:
+The first whiteboard and the first task lists were very plain.
 
 | First whiteboard | First tasks |
 |---|---|
@@ -36,7 +36,7 @@ The first whiteboard and the first task lists were very plain:
 
 ## The first setup
 
-A first-run setup asked for the calendar link and, at that time, **which handwriting engine** to use: Apple's native ink, or "works everywhere" ink. Keep that second screen in mind, it comes back in chapter 6.
+When you first opened the app it asked for your calendar link. Back then it also asked which handwriting engine you wanted: Apple's native ink, or ink that "works everywhere". Remember that second screen. It comes back in chapter 6.
 
 | Add your calendar | Choose your handwriting |
 |---|---|
@@ -44,34 +44,34 @@ A first-run setup asked for the calendar link and, at that time, **which handwri
 
 ## The bugs
 
-The prototype worked, mostly. The release notes from those weeks read like a bug diary:
+The prototype worked. Mostly. If you read the release notes from those weeks in a row, they sound like a bug diary:
 
-- **0.6.0:** "Settings stopped forgetting your theme, and sync no longer gets stuck."
-- **0.8.0:** "Handwriting fixes for both kinds of handwriting, and the web app can save again."
-- **0.11.0:** "Fixes for what you reported in 0.10.0."
-- **0.12.0:** "Fixes for what you reported, and for things that were quietly broken."
-- **0.15.0:** "Ink can no longer land on the wrong page."
-- **0.16.0:** "The web app no longer loses the last thing you did."
+- 0.6.0: "Settings stopped forgetting your theme, and sync no longer gets stuck."
+- 0.8.0: "Handwriting fixes for both kinds of handwriting, and the web app can save again."
+- 0.11.0: "Fixes for what you reported in 0.10.0."
+- 0.12.0: "Fixes for what you reported, and for things that were quietly broken."
+- 0.15.0: "Ink can no longer land on the wrong page."
+- 0.16.0: "The web app no longer loses the last thing you did."
 
-Some favourites from that time:
+A few I remember best.
 
-- **Ink on the wrong page.** Turn a page quickly while the pen is still down and the stroke would land on the next page.
-- **The web app opened blank.** The web build shipped with a stock start page that showed nothing until everything had loaded. On a slow connection that looked like a dead app.
-- **Settings did not sync**, because of two separate bugs that each failed silently.
-- **A real school week almost went public.** The very first landing page screenshots had been taken on a build connected to a real calendar. It was caught before anything was published, and from then on every public picture had to come from an invented demo week. That rule is why almost every screenshot here shows "Mathematics 7.B" and a made-up staff meeting. The only exceptions are a few shots of the very first build below, kept in on purpose because they show day one.
+Ink landed on the wrong page. If you turned a page quickly while the pen was still down, the stroke ended up on the next page.
 
-When the app could not open its local data after an update, it at least said so honestly instead of pretending to save:
+The web app opened blank. The web build went out with a stock start page that showed nothing until everything had loaded. On a slow connection that looked like a dead app.
+
+Settings did not sync. That was two separate bugs, and both failed without a sound.
+
+And a real school week almost went public. The very first landing page screenshots were taken on a build connected to a real calendar. I caught it before anything was published. Since then every public picture has to come from an invented demo week, which is why almost every screenshot here shows "Mathematics 7.B" and a made-up staff meeting. The only exceptions are a few shots of the very first build further down. I kept those on purpose because they show day one.
+
+When the app could not open its local data after an update, it at least said so instead of pretending to save:
 
 <img src="../../assets/prototype/2026-09-21-error-cannot-open-data.webp" alt="Error screen: NorthStar cannot open your data on this device" width="480">
 
-### What I learned
-
-- **Ship early to the one real user.** My mum found things in a day that no test found in a week.
-- **Silent failures are the worst kind.** A crash gets reported. A setting that quietly does not sync just makes someone stop trusting the app. From here on, the rule was: if something did not save, the app has to say so.
+Two things stuck with me from these weeks. Give the app to the one real user early, because my mum found things in a day that no test found in a week. And the quiet failures are the worst ones. A crash gets reported. A setting that quietly doesn't sync just makes someone stop trusting the app. So from here on the rule was: if something did not save, the app has to say so.
 
 ## More from the first weeks
 
-The very first build on 22 August was an empty month. A few days later came the first web build, test renders with placeholder fonts, and in September a full first-run setup.
+The very first build on 22 August was an empty month. A few days later came the first web build and test renders with placeholder fonts. In September there was a full first-run setup.
 
 | First build, 22 Aug | First web build, 27 Aug | Placeholder-font test render |
 |---|---|---|
@@ -83,7 +83,7 @@ The very first build on 22 August was an empty month. A few days later came the 
 
 ## The very first build, with the real calendar
 
-On 22 August the first build ran on the iPad simulator against my mum's real school calendar link. This is what the app looked like on day one, before any design work.
+On 22 August the first build ran on the iPad simulator against my mum's real school calendar link. This is the app on day one, before any design work.
 
 | Day, 22 Aug | Month, 22 Aug | Week, 22 Aug |
 |---|---|---|

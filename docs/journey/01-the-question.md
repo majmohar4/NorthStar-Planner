@@ -2,32 +2,24 @@
 
 [Next: Mum's idea →](02-mums-idea.md) · [Back to README](../../README.md)
 
-Before there was a planner, there was a blank page.
+Before I planned a single screen, I had one worry. Writing with an Apple Pencil has to feel good. If the line drags behind the tip of the pen, my mum won't use the app, and it doesn't matter how clever everything else is.
 
-The whole idea depended on one thing: **writing on a screen with an Apple Pencil has to feel good**. If the ink trails behind the pen tip, nobody will use it, no matter how clever the rest of the app is. So before planning a single screen, I wanted to know how much latency each way of building the app would give me.
+So I didn't start with a planner. I started with a blank page.
 
-## The experiment
+## The test
 
-I built the same thing three times: an empty page you can write on with an Apple Pencil.
+I built the same thing three times: an empty page you can write on with an Apple Pencil. Once as a native iPad page with Apple's own drawing framework. Once in Flutter, with my own stroke drawing on a canvas. And once as a web page, drawing into a browser canvas.
 
-1. **A native iPad page**, using Apple's own drawing framework.
-2. **A Flutter page**, with my own stroke drawing on a canvas.
-3. **A web page**, drawing into a browser canvas.
+Then I sat there and scribbled on all three, again and again, watching how far the line fell behind the Pencil.
 
-Then I wrote on all three, again and again, and compared how far the line lagged behind the Pencil.
+## What came out of it
 
-## The result, and how it changed
+Native won, and it wasn't close. So the first versions of NorthStar used Apple's native ink on iPad and iPhone, and a Flutter whiteboard for everything else.
 
-The first answer was clear: **native was the obvious winner.** So the first versions of NorthStar used Apple's native ink on iPad and iPhone, with a Flutter whiteboard for everything else.
+That didn't survive notebooks. Once I started adding pages, paper types, pictures, a lasso and page turns, native ink was not usable enough for what a notebook needs. It also only worked on Apple devices. I moved things over to the Flutter whiteboard bit by bit and removed the native ink option on 6 September. [Chapter 6](06-handwriting-and-notebooks.md) has the full story.
 
-That did not last. When I started adding **notebooks**, with pages, paper types, pictures, a lasso and page turns, the native ink surface was not usable enough for what a notebook needs, and it only worked on Apple devices. So I gradually moved everything to the Flutter whiteboard and finally removed the native ink option on **6 September** (the story is in [chapter 6](06-handwriting-and-notebooks.md)).
+From then on all the work went into the Flutter side. Release after release I made the whiteboard faster and smoother, until writing in NorthStar felt very close to Apple's own Notes app. Notes was always the thing I compared against.
 
-After that the work was on the Flutter side: making the whiteboard faster and smoother, release after release, until writing in NorthStar felt really close to Apple's own Notes app, which was always the benchmark.
-
-## What I learned
-
-- **Measure first.** The blank-page test gave a clear answer on latency before any real code existed.
-- **The best component is not always the best fit.** Native ink had the best latency on a blank page, but a notebook needs much more than a blank page.
-- **One engine you can improve beats two you have to keep in sync.** Most of the pen feel was won later, by optimising the one engine NorthStar kept.
+I'm still glad I tested before building anything. The blank page gave me a clear answer about latency before any real code existed. It just wasn't the whole answer, because a notebook is a lot more than a blank page. And most of the pen feel came later anyway, from tuning the one engine I kept.
 
 [Next: Mum's idea →](02-mums-idea.md)

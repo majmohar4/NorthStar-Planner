@@ -2,11 +2,11 @@
 
 [Back to README](../README.md)
 
-Most pictures here show **invented demo data** or my own test devices. A few shots of the very first build (22 August) show the real school calendar it was tested with. Email addresses and names are hidden behind solid boxes.
+Most pictures here show invented demo data or my own test devices. A few shots of the very first build (22 August) show the real school calendar I tested it with. Email addresses and names are covered with solid boxes.
 
 ## How it looked over time
 
-One picture per version, from the first empty build to today.
+One picture per version, from the empty first build to today.
 
 | Version | | Version | |
 |---|---|---|---|

@@ -2,42 +2,35 @@
 
 [← The calendar](05-calendar.md) · [Next: Design and Glass →](07-design-and-glass.md)
 
-Handwriting is why NorthStar exists, so it got more attention than anything else. It is also where I changed my mind the most.
+Handwriting is the reason NorthStar exists, so it got more of my time than anything else. It's also where I changed my mind the most.
 
 ## Two ink engines, then one
 
-Remember the setup screen from the prototype that asked *which* handwriting you want? For the first weeks NorthStar had two ink engines:
+Remember the setup screen from the prototype that asked which handwriting you want? For the first weeks NorthStar had two ink engines. On iPad and iPhone there was Apple ink, Apple's own drawing framework, with the best pen feel. And there was "works everywhere" ink, my own Flutter stroke engine, which you could edit on every device.
 
-- **Apple ink** on iPad and iPhone: Apple's own drawing framework, the best pen feel.
-- **"Works everywhere" ink**: my own Flutter stroke engine, editable on every device.
+It sounded like the best of both. It turned out to be the worst of both. An Apple page was stored as Apple's own drawing data plus a picture, so on the web, on Android and on Windows it was just an image. My mum could write a note on the iPad and then not edit it on her laptop. On top of that I had to build every feature twice: lasso, pictures, tables, page turns.
 
-It sounded like the best of both. In practice it was the worst of both. An Apple page was stored as Apple's own drawing data plus a picture, so on the web, on Android and on Windows it was just an image you could not edit. My mum could write a note on the iPad and then **not edit it on her laptop**. Two engines also meant every feature (lasso, pictures, tables, page turns) had to be built twice.
+On 6 September I removed the Apple engine. Apple Pencil support stayed, of course, with pressure, tilt, palm rejection and the Pencil squeeze. But all ink is now one format, drawn by one engine, and you can edit it on every device.
 
-On **6 September** I removed the Apple engine. Apple Pencil support stayed, of course: pressure, tilt, palm rejection and the Pencil squeeze. But all ink is now one format, drawn by one engine, and editable on every device.
-
-**Learned:** one thing that works everywhere beats two things where one is half-reachable. And removing a feature that already has user data needs a careful migration, not just a delete.
+Taking it out was not just a delete. People already had pages written in the old format, so it needed a careful migration.
 
 ## Making the pen feel right
 
-The goal from [chapter 1](01-the-question.md) never went away: the line must follow the pen with no visible lag. Over many releases:
+The goal from [chapter 1](01-the-question.md) never went away. The line has to follow the pen with no lag you can see. It took many releases to get there.
 
-- strokes are drawn the instant the pen moves, and only tidied when you lift it,
-- the page you are writing on is never redrawn as a whole while you write,
-- pictures of pages are rendered at quiet moments, not on every autosave,
-- a pen held still for a moment straightens a line or turns a scribble into a clean shape,
-- black ink turns white in dark mode, everywhere, at once (1.3.22).
+A stroke is drawn the instant the pen moves and only tidied when you lift it. The page you are writing on is never redrawn as a whole while you write. Pictures of pages get rendered at quiet moments and not on every autosave. If you hold the pen still for a moment, a line straightens or a scribble turns into a clean shape. And since 1.3.22 black ink turns white in dark mode, everywhere, at once.
 
-Release **1.3.17** (26 October) says it shortest: *"Writing feels instant."*
+The note for release 1.3.17 (26 October) says it shortest: *"Writing feels instant."* I was proud of that one.
 
 ## The tools grow up
 
-In early October the notebook got a floating pen palette, a page menu and a lasso to move writing around:
+In early October the notebook got a floating pen palette, a page menu and a lasso to move writing around.
 
 | Floating pen palette | Lasso selection | Page and paper menu |
 |---|---|---|
 | ![Floating pen palette](../../assets/notebooks/2026-10-02-floating-pen-palette.webp) | ![Lasso selection around ink](../../assets/notebooks/2026-10-02-lasso-selection.webp) | ![Page menu with paper types](../../assets/notebooks/2026-10-02-page-menu-paper.webp) |
 
-Later came an Apple-style pen toolbar with real-looking pens, customizable pens and colours (2.3.0), a laser pointer for presenting (3.1.0) and a highlighter (3.4.0):
+Later came an Apple-style pen toolbar with real-looking pens, pens and colours you can customize (2.3.0), a laser pointer for presenting (3.1.0) and a highlighter (3.4.0).
 
 | Notebook with tabs | Customize pens | Laser pointer |
 |---|---|---|
@@ -45,7 +38,7 @@ Later came an Apple-style pen toolbar with real-looking pens, customizable pens 
 
 ## Notebooks, papers, covers
 
-Notebooks have covers, and many papers: lines, wide and narrow lines, dots, grid, blank, and school papers like maths squares, a music staff and notes-with-summary. You can import a PDF as a notebook, bring in notebooks from other notebook apps, add tables, and export as PDF, image or a NorthStar file.
+Notebooks have covers and a lot of papers: lines, wide and narrow lines, dots, grid, blank, and school papers like maths squares, a music staff and notes-with-summary. You can import a PDF as a notebook, bring in notebooks from other notebook apps, add tables, and export as PDF, image or a NorthStar file.
 
 | Covers | New notebook | Export |
 |---|---|---|
@@ -55,7 +48,7 @@ Notebooks have covers, and many papers: lines, wide and narrow lines, dots, grid
 |---|---|---|
 | ![A table on a notebook page](../../assets/notebooks/notebook-table.webp) | ![A mind map on the whiteboard](../../assets/notebooks/whiteboard-mind-map.webp) | ![Page overview strip beside a page](../../assets/notebooks/page-overview.webp) |
 
-There is also a beta **handwriting correction**: write a sample notebook in your best handwriting, and the app gently nudges new writing towards it. Your writing stays yours.
+There is also handwriting correction, still in beta. You write a sample notebook in your best handwriting, and the app gently nudges new writing towards it. Your writing stays yours.
 
 ![Handwriting correction (beta) settings](../../assets/notebooks/handwriting-correction-beta.webp)
 
@@ -63,19 +56,25 @@ There is also a beta **handwriting correction**: write a sample notebook in your
 
 No feature had more versions than turning a page.
 
-1. **2 September: "no page curl".** My own early design rules said no fake paper effects at all: no curl, no binder, no texture. Pages just slid.
-2. **9 September:** sliding felt cheap on an iPad. *"Turning a page is smooth now, and you can see the edge of the paper as it goes."* A first, simple page edge.
-3. **26 October:** a real **page curl** became the default turn in Book mode, and the early rule was narrowed: curl allowed, but only as a visual effect, never over your writing.
-4. **27 October:** my mum noticed that while you drag, the *next* page was not under the curl, it only appeared after you let go. Fixed: the real neighbouring pages are prepared in advance, and the curl got proper 3D perspective and a shadow.
-5. **5 November: Open book.** Two pages side by side, and the leaf curls across the spine, showing the next page on its back.
-6. **12 November, the bad day.** During the Glass redesign the curl **changed look as a side effect** of other work. Nobody asked for that, and I was not happy. The curl was put back exactly as it was, and since then there is a rule: the page curl look is never changed by accident.
-7. **16 November:** adding a new page with a curl could briefly blank the page or double the ruled lines at the end of the animation. Fixed, and tested frame by frame:
+On 2 September my rule was "no page curl". My own early design rules banned fake paper effects completely. No curl, no binder, no texture. Pages just slid.
+
+By 9 September I had to admit that sliding felt cheap on an iPad. *"Turning a page is smooth now, and you can see the edge of the paper as it goes."* That was a first, simple page edge.
+
+On 26 October a real page curl became the default turn in Book mode. I narrowed the early rule: a curl is allowed, but only as a visual effect, never over your writing.
+
+A day later, on 27 October, my mum noticed something. While you dragged, the next page was not under the curl. It only appeared after you let go. I fixed it by preparing the real neighbouring pages in advance, and the curl got proper 3D perspective and a shadow.
+
+5 November brought Open book. Two pages side by side, and the leaf curls across the spine and shows the next page on its back.
+
+12 November was the bad day. During the Glass redesign the curl changed its look as a side effect of other work. Nobody asked for that, and I was not happy. The curl went back exactly as it was, and since then there is a rule that the page curl look is never changed by accident.
+
+On 16 November there was one more bug. Adding a new page with a curl could briefly blank the page or double the ruled lines at the end of the animation. That got fixed and tested frame by frame:
 
 ![Test frames of the page curl, checked one by one](../../assets/notebooks/2026-11-16-page-curl-test-frames.webp)
 
 ![The page curl today](../../assets/notebooks/page-curl.webp)
 
-**Learned:** for something people *feel* (a page turn, a pen stroke), small changes matter enormously. Protect what works, and check it with your own eyes, not only with a test.
+With things people feel, like a page turn or a pen stroke, tiny changes matter a lot. So I protect what works, and I check it with my own eyes. A passing test is not enough here.
 
 ## More notebook history
 

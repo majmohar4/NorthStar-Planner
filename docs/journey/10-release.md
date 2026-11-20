@@ -2,23 +2,27 @@
 
 [← Polish and feedback rounds](09-polish-and-feedback-rounds.md) · [Next: What's next →](11-whats-next.md)
 
-For most of its life NorthStar was installed by hand: on my mum's iPad and iPhone, on my own devices, as a web app and as an Android APK. Going public meant stores, a landing page, store pictures, privacy texts, and review.
+For most of its life NorthStar was installed by hand. On my mum's iPad and iPhone, on my own devices, as a web app and as an Android APK. Going public was a different kind of work: stores, a landing page, store pictures, privacy texts, and review.
 
 ## The landing page
 
-The landing page at [northstar.majmohar.eu](https://northstar.majmohar.eu) is generated from one content file, in English and Slovenian, and it went through its own journey:
+The landing page at [northstar.majmohar.eu](https://northstar.majmohar.eu) is generated from one content file, in English and Slovenian. It changed almost as often as the app.
 
-- **August:** a first spec: warm paper colours like the app, one clear hero, screenshots from the demo week.
-- **2 October:** a redesign with a live Day view you can draw on in the browser, and short silent films of the app (writing on a lesson, the Top 3, the pen palette).
-- **5 November:** a *New in 3.0* gallery and download buttons, plus a clear section on what NorthStar does with Google data, needed for Google's verification of calendar access.
-- **9 November:** five pages (home, features, download, pricing, story). Pricing is simple: the app is free, donations are optional.
-- **16 November:** redone in the Glass look.
+In August there was only a first spec: warm paper colours like the app, one clear hero, screenshots from the demo week.
+
+On 2 October I redesigned it with a live Day view you can draw on in the browser, and short silent films of the app (writing on a lesson, the Top 3, the pen palette).
+
+On 5 November it got a *New in 3.0* gallery and download buttons. It also got a clear section on what NorthStar does with Google data, which Google needed to verify the calendar access.
+
+On 9 November it grew to five pages (home, features, download, pricing, story). Pricing is simple. The app is free, and donations are optional.
+
+On 16 November I redid it in the Glass look.
 
 ![The landing page in October, with a live Day view you can write on](../../assets/release/2026-10-02-first-landing-page.webp)
 
 ## Store pictures
 
-All store screenshots are made from the same invented demo week, rendered at exact store sizes, with a short headline on each.
+All store screenshots come from the same invented demo week. They are rendered at the exact store sizes, each with a short headline.
 
 | | | |
 |---|---|---|
@@ -29,29 +33,33 @@ All store screenshots are made from the same invented demo week, rendered at exa
 
 ## App Store
 
-The App Store listing covers iPhone, iPad and Mac. Review did not go through on the first try. App Review sent the submission back with a request for more information, including **a screen recording of the full user flow**, which I had not provided. So I recorded it myself on a MacBook: open the app, sign in, walk through the calendar, notes, handwriting, notebooks and tasks, sign out, and a second clip showing how to delete an account. Together with a written explanation of what the app is for and which services it relies on, it went back to review.
+The App Store listing covers iPhone, iPad and Mac. It did not get through review on the first try. App Review sent the submission back and asked for more information, including a screen recording of the full user flow. I hadn't provided one.
 
-**Learned:** reviewers can only judge what they can see. Make it easy for them: a ready demo account with a sample timetable, a short recording, and plain answers.
+So I recorded it myself on a MacBook. Open the app, sign in, walk through the calendar, notes, handwriting, notebooks and tasks, sign out. Then a second clip that shows how to delete an account. I added a written explanation of what the app is for and which services it relies on, and sent it back to review.
+
+Reviewers can only judge what they can see. It helps to make that easy for them: a ready demo account with a sample timetable, a short recording and plain answers.
 
 [App Store link](https://apps.apple.com/app/id6831786463)
 
 ## Google Play
 
-Google Play had its own surprises:
+Google Play had its own surprises.
 
-- The very first upload was **rejected because it was signed with a debug certificate**. It was rebuilt with a proper upload key.
-- A personal developer account must run a **closed test with at least 12 testers for 14 days** before the app can go public. So NorthStar is in closed testing on Google Play right now. [Ask to join](https://play.google.com/store/apps/details?id=eu.majmohar.northstar).
+My very first upload was rejected because it was signed with a debug certificate. I rebuilt it with a proper upload key.
+
+Then I found out that a personal developer account has to run a closed test with at least 12 testers for 14 days before the app can go public. So NorthStar is in closed testing on Google Play right now. [Ask to join](https://play.google.com/store/apps/details?id=eu.majmohar.northstar).
 
 Until then, the Android APK on the [Releases page](https://github.com/majmohar4/NorthStar-Planner/releases) works on any Android device and updates itself.
 
-## Web, Windows, Mac and Linux
+## Web, Mac, Linux and Windows
 
-- The **web app** at [app-northstar.majmohar.eu](https://app-northstar.majmohar.eu) is always the newest version.
-- **Windows** and a direct **macOS** download go to [Releases](https://github.com/majmohar4/NorthStar-Planner/releases). They are not code-signed, see the [install notes](../../README.md#install-notes). A **Linux** build is coming soon.
+The web app at [app-northstar.majmohar.eu](https://app-northstar.majmohar.eu) is always the newest version.
+
+A direct macOS download and a Linux build are on the [Releases](https://github.com/majmohar4/NorthStar-Planner/releases) page. A Windows build is coming soon. The Mac zip and the Windows build are not code-signed, so read the [install notes](../../README.md#install-notes) first.
 
 ## Promo video
 
-*Coming soon.* A short promo video of NorthStar is in the works and will be linked here when it is final. A still from the current cut:
+*Coming soon.* I'm working on a short promo video of NorthStar and will link it here when it's final. This is a still from the current cut:
 
 ![Promo video poster, work in progress](../../assets/release/promo-v3-poster.webp)
 

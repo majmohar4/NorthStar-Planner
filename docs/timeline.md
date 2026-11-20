@@ -2,12 +2,13 @@
 
 [Back to README](../README.md)
 
-Every release of NorthStar Planner, newest first, in the words of its release note. Dates are 2026.
+Every release of NorthStar Planner, newest first. The text in each row is the release note I wrote for that version. All dates are 2026.
 
-Before 0.6.0 there were internal milestone builds (M1 to M5, 22 to 27 August): the calendar views, the first ink, the sync server, sign-in and the first web build.
+Before 0.6.0 there were only internal milestone builds (M1 to M5, 22 to 27 August). Those had the calendar views, the first ink, the sync server, sign-in and the first web build.
 
 | Version | Date | What changed |
 |---|---|---|
+| 3.6.0 | 20 Nov | Camera in notebooks, an AI lasso for Ask AI, editable stickers, an Ask AI panel that docks to the side, bigger widgets and faster switching. |
 | 3.5.0 | 19 Nov | Home Screen widget styles, a Glass or Classic try-out in What's new, and clearer export names. |
 | 3.4.0 | 16 Nov | Ask AI with your own API key, a new highlighter, faster notebooks, easier notebook and PDF import, smoother sign-in and a lighter phone app. |
 | 3.3.0 | 14 Nov | New appearance: Glass design, shared backgrounds, adjustable frost and palette-matched planner pages. |
@@ -81,4 +82,4 @@ Before 0.6.0 there were internal milestone builds (M1 to M5, 22 to 27 August): t
 | 0.7.0 | 28 Aug | Privacy Policy and Terms open in your browser. |
 | 0.6.0 | 28 Aug | Settings stopped forgetting your theme, and sync no longer gets stuck. |
 
-Counted: 104 release notes between 28 August and 19 November 2026.
+I counted 104 release notes between 28 August and 19 November 2026.
