@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+._*
+
+# Builds are published on GitHub Releases, never committed
+*.apk
+*.aab
+*.ipa
+*.pkg
+*.dmg
+*.zip
+*.tar.gz
+*.exe
+*.msix
+
+# Editors
+.vscode/
+.idea/
+*.swp
