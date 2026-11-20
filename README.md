@@ -39,8 +39,8 @@ It started as an idea from my mum, a teacher, who wanted one place for her schoo
 | Mac | [App Store](https://apps.apple.com/app/id6831786463) or a zip from [Releases](https://github.com/majmohar4/NorthStar-Planner/releases) | The direct zip is unsigned, see below. |
 | Android | [Google Play](https://play.google.com/store/apps/details?id=eu.majmohar.northstar) (closed testing, ask to join) or an APK from [Releases](https://github.com/majmohar4/NorthStar-Planner/releases) | |
 | Web | [app-northstar.majmohar.eu](https://app-northstar.majmohar.eu) | Any modern browser. Installable as an app. |
-| Windows | zip from [Releases](https://github.com/majmohar4/NorthStar-Planner/releases) | Unsigned, see below. |
-| Linux | Coming soon | A Linux build will be added to [Releases](https://github.com/majmohar4/NorthStar-Planner/releases) later. |
+| Windows | Coming soon | A Windows build will be added to [Releases](https://github.com/majmohar4/NorthStar-Planner/releases) soon (unsigned, see below). |
+| Linux | tar.gz from [Releases](https://github.com/majmohar4/NorthStar-Planner/releases) | x64. Needs a system keyring (for example GNOME Keyring) and xdg-user-dirs. |
 
 Landing page: [northstar.majmohar.eu](https://northstar.majmohar.eu)
 

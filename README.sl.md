@@ -39,8 +39,8 @@ Začelo se je z idejo moje mame, učiteljice, ki je želela imeti šolski urnik 
 | Mac | [App Store](https://apps.apple.com/app/id6831786463) ali zip na strani [Releases](https://github.com/majmohar4/NorthStar-Planner/releases) | Neposredni zip ni podpisan, glej spodaj. |
 | Android | [Google Play](https://play.google.com/store/apps/details?id=eu.majmohar.northstar) (zaprto testiranje, piši mi, če se želiš pridružiti) ali APK na strani [Releases](https://github.com/majmohar4/NorthStar-Planner/releases) | |
 | Splet | [app-northstar.majmohar.eu](https://app-northstar.majmohar.eu) | Katerikoli sodoben brskalnik. Lahko ga namestiš kot aplikacijo. |
-| Windows | zip na strani [Releases](https://github.com/majmohar4/NorthStar-Planner/releases) | Ni podpisan, glej spodaj. |
-| Linux | Kmalu | Različica za Linux bo kasneje dodana na stran [Releases](https://github.com/majmohar4/NorthStar-Planner/releases). |
+| Windows | Kmalu | Različica za Windows bo kmalu dodana na stran [Releases](https://github.com/majmohar4/NorthStar-Planner/releases) (ni podpisana, glej spodaj). |
+| Linux | tar.gz na strani [Releases](https://github.com/majmohar4/NorthStar-Planner/releases) | x64. Potrebuje sistemski keyring (na primer GNOME Keyring) in xdg-user-dirs. |
 
 Predstavitvena stran: [northstar.majmohar.eu](https://northstar.majmohar.eu)
 
