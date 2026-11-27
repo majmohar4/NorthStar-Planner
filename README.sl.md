@@ -39,15 +39,15 @@ Moja mama je učiteljica. Hotela je imeti šolski urnik in svoje zapiske na enem
 | Mac | [App Store](https://apps.apple.com/app/id6831786463) ali zip na strani [Releases](https://github.com/majmohar4/NorthStar-Planner/releases) | Zip ni podpisan, glej spodaj. |
 | Android | [Google Play](https://play.google.com/store/apps/details?id=eu.majmohar.northstar) (zaprto testiranje, piši mi, če hočeš zraven) ali APK na strani [Releases](https://github.com/majmohar4/NorthStar-Planner/releases) | |
 | Splet | [app-northstar.majmohar.eu](https://app-northstar.majmohar.eu) | Katerikoli sodoben brskalnik. Lahko si jo namestiš kot aplikacijo. |
-| Windows | Namestitveni program (`Setup.exe`) ali zip na strani [Releases](https://github.com/majmohar4/NorthStar-Planner/releases) | x64. Ni podpisana, glej spodaj. |
-| Linux | tar.gz na strani [Releases](https://github.com/majmohar4/NorthStar-Planner/releases) | x64. Rabi sistemski keyring (recimo GNOME Keyring) in xdg-user-dirs. |
+| Windows | Namestitveni program (`Setup.exe`) ali arhiv ZIP na strani [Releases](https://github.com/majmohar4/NorthStar-Planner/releases) | x64. Aplikacija ni digitalno podpisana, glej spodaj. |
+| Linux | Arhiv tar.gz na strani [Releases](https://github.com/majmohar4/NorthStar-Planner/releases) | x64. Potrebna sta sistemska shramba ključev (npr. GNOME Keyring) in xdg-user-dirs. |
 
 Predstavitvena stran: [northstar.majmohar.eu](https://northstar.majmohar.eu)
 
 ### Navodila za namestitev
 
 - **Android APK:** prenesi datoteko `.apk`, odpri jo in dovoli »Nameščanje neznanih aplikacij« za brskalnik ali upravitelja datotek, ko te Android vpraša. Potem aplikacija sama preverja posodobitve.
-- **Windows:** zaženi `NorthStar-Planner-<različica>-Setup.exe` ali razpakiraj zip, kamor hočeš, in zaženi `NorthStarPlanner.exe`. Različica ni podpisana, zato se lahko oglasi Windows SmartScreen. Klikni **Več informacij → Vseeno zaženi** (angleško *More info → Run anyway*).
+- **Windows:** zaženi `NorthStar-Planner-<različica>-Setup.exe` ali razširi arhiv ZIP v želeno mapo in zaženi `NorthStarPlanner.exe`. Aplikacija ni digitalno podpisana, zato lahko Windows SmartScreen prikaže varnostno opozorilo. Izberi **Več informacij → Vseeno zaženi** (v angleščini *More info → Run anyway*).
 - **macOS (zip):** razpakiraj in premakni NorthStar v mapo Aplikacije. Različica ni overjena pri Applu, zato jo moraš prvič odpreti tako, da **z desnim gumbom klikneš aplikacijo → Odpri** in potrdiš. Pri različici iz App Stora tega ni treba.
 - **Splet:** samo odpri povezavo. V Safariju na iPadu izberi Deli → Dodaj na začetni zaslon, v Chromu ali Edgu pa klikni ikono za namestitev v naslovni vrstici.
 
