@@ -39,7 +39,7 @@ My mum is a teacher. She wanted her school timetable and her notes in one place,
 | Mac | [App Store](https://apps.apple.com/app/id6831786463) or a zip from [Releases](https://github.com/majmohar4/NorthStar-Planner/releases) | The direct zip is unsigned, see below. |
 | Android | [Google Play](https://play.google.com/store/apps/details?id=eu.majmohar.northstar) (closed testing, ask to join) or an APK from [Releases](https://github.com/majmohar4/NorthStar-Planner/releases) | |
 | Web | [app-northstar.majmohar.eu](https://app-northstar.majmohar.eu) | Any modern browser. Installable as an app. |
-| Windows | Coming soon | A Windows build will be added to [Releases](https://github.com/majmohar4/NorthStar-Planner/releases) soon (unsigned, see below). |
+| Windows | Installer (`Setup.exe`) or zip from [Releases](https://github.com/majmohar4/NorthStar-Planner/releases) | x64. Unsigned, see below. |
 | Linux | tar.gz from [Releases](https://github.com/majmohar4/NorthStar-Planner/releases) | x64. Needs a system keyring (for example GNOME Keyring) and xdg-user-dirs. |
 
 Landing page: [northstar.majmohar.eu](https://northstar.majmohar.eu)
@@ -47,7 +47,7 @@ Landing page: [northstar.majmohar.eu](https://northstar.majmohar.eu)
 ### Install notes
 
 - **Android APK:** download the `.apk`, open it, and allow "Install unknown apps" for your browser or file manager when Android asks. After that the app checks for updates on its own.
-- **Windows:** unzip the folder anywhere and run `northstar.exe`. I haven't code-signed the build, so Windows SmartScreen may complain. Click **More info → Run anyway**.
+- **Windows:** run `NorthStar-Planner-<version>-Setup.exe`, or unzip the zip anywhere and run `NorthStarPlanner.exe`. I haven't code-signed the build, so Windows SmartScreen may complain. Click **More info → Run anyway**.
 - **macOS (direct zip):** unzip and move NorthStar to Applications. The build is not notarized, so the first time you have to **right-click the app → Open** and confirm. The App Store version needs none of this.
 - **Web:** just open the link. In Safari on iPad use Share → Add to Home Screen. In Chrome or Edge use the install icon in the address bar.
 
